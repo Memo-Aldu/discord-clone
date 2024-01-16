@@ -87,6 +87,8 @@ export const MembersModal = () => {
         }
     }
 
+    console.log(server)
+
     return (
         <Dialog open={isModalOpen} onOpenChange={onClose}>
             <DialogContent className="bg-white text-black overflow-hidden">

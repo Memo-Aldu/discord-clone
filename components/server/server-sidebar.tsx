@@ -35,27 +35,26 @@ export const ServerSidebar = async ({serverId} : ServerSidebarProps) => {
         return redirect("/");
     }
 
-    const server = await db.server.findUnique({
-        where: {
-            id: serverId
+  const server = await db.server.findUnique({
+    where: {
+      id: serverId,
+    },
+    include: {
+      channels: {
+        orderBy: {
+          createdAt: "asc",
         },
+      },
+      members: {
         include: {
-            channels: {
-                orderBy: {
-                    createdAt: "asc"
-                }
-            },
-            members: {
-                include: {
-                    profile: true
-                },
-                orderBy: {
-                    role: "asc"
-                }
-            }
+          profile: true,
         },
-
-    });
+        orderBy: {
+          role: "asc",
+        }
+      }
+    }
+  });
 
 
     const textChannels = server?.channels.filter(channel => channel.type === ChannelType.TEXT);
@@ -69,7 +68,6 @@ export const ServerSidebar = async ({serverId} : ServerSidebarProps) => {
     }
 
     const role = server.members.find(member => member.profileId === profile.id)?.role;
-
 
 
     return (
