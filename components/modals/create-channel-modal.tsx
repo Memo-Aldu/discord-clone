@@ -114,7 +114,7 @@ export const CreateChannelModal = () => {
                         Create a channel
                     </DialogTitle>
                     <DialogDescription className="text-center text-zinc-500">
-                        Channels are where your members communicate. They're best when organized around a topic.
+                        Channels are where your members communicate. Theyre best when organized around a topic.
                     </DialogDescription>
                 </DialogHeader>
                 <Form {...form}>
