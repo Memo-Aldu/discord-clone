@@ -85,7 +85,6 @@ export const ChatInput = ({apiUrl, query, name, type}: ChatInputProps) => {
                    </FormItem>
                )} />
             </form>
-
         </Form>
     )
 }

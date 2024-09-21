@@ -34,6 +34,7 @@
     "clsx": "^2.1.0",
     "cmdk": "^0.2.0",
     "date-fns": "^3.2.0",
+    "discord-clone": "file:",
     "emoji-mart": "^5.5.2",
     "livekit-client": "^1.15.10",
     "livekit-server-sdk": "^1.2.7",
@@ -68,6 +69,6 @@
     "typescript": "^5"
   },
   "optionalDependencies": {
-        "@next/swc-win32-x64-msvc": "^14.0.4"
+    "@next/swc-win32-x64-msvc": "^14.0.4"
   }
 }
